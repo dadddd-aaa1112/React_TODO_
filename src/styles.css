@@ -1,0 +1,24 @@
+textarea {
+  resize: none;
+  background-color: #fafafa;
+  border: 1.5px solid silver;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 0.7em;
+  width: 90%;
+  outline: none;
+}
+
+textarea:focus {
+  border: 1.5px solid #6d79cd;
+}
+
+.btn.success {
+  background-color: #4fc966;
+  border: 2px solid #2aa24f;
+}
+
+.btn.success:hover {
+  background-color: #2aa24f;
+  border: 2px solid #1e853e;
+}
