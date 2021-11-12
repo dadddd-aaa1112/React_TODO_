@@ -101,12 +101,21 @@ class Field extends React.Component {
     );
   };
 
+  delAll = () => {
+    this.setState({
+      tasks: []
+    });
+  };
+
   render() {
     return (
       <div className="Field">
         <button onClick={this.addElem.bind(null, "Simple task")}>
           Add task
         </button>
+        <br />
+        <br />
+        <button onClick={this.delAll}>delete all tasks</button>
         {this.state.tasks.map(this.eachElem)}
       </div>
     );
