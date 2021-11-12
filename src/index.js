@@ -60,7 +60,7 @@ class Field extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tasks: ["by fish", "by milk"]
+      tasks: []
     };
   }
 
@@ -80,7 +80,7 @@ class Field extends React.Component {
     });
   };
 
-  pushElem = (elem) => {
+  addElem = (elem) => {
     let arr = this.state.tasks;
     arr.push(elem);
     this.setState({
@@ -102,7 +102,14 @@ class Field extends React.Component {
   };
 
   render() {
-    return <div className="Field">{this.state.tasks.map(this.eachElem)}</div>;
+    return (
+      <div className="Field">
+        <button onClick={this.addElem.bind(null, "Simple task")}>
+          Add task
+        </button>
+        {this.state.tasks.map(this.eachElem)}
+      </div>
+    );
   }
 }
 
